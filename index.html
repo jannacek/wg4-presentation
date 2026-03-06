@@ -38,8 +38,7 @@ html, body {
   color: var(--ink);
   background: var(--bg);
   display: grid;
-  grid-template-columns: 240px 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 256px 1fr;
 }
 
 #app::before {
@@ -67,35 +66,37 @@ html, body {
 
 .sb-meta { margin-bottom: 36px; }
 .sb-author {
-  font-family: var(--serif); font-size: 13px; font-weight: 300;
+  font-family: var(--serif); font-size: 14px; font-weight: 300;
   letter-spacing: 0.02em; color: var(--muted); line-height: 1.65;
 }
 .sb-label {
-  margin-top: 7px; font-size: 10px; font-weight: 500;
+  margin-top: 7px; font-size: 11px; font-weight: 500;
   letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent);
 }
-.sb-section { margin-bottom: 24px; }
+.sb-section { margin-bottom: 20px; }
 .sb-section-title {
-  font-size: 9px; font-weight: 500; letter-spacing: 0.2em;
+  font-size: 10px; font-weight: 500; letter-spacing: 0.2em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 8px; padding-left: 4px;
 }
 .nav-btn {
-  display: flex; align-items: baseline; gap: 6px;
+  display: flex; align-items: baseline; gap: 7px;
   width: 100%; padding: 9px 12px; border-radius: 6px;
-  font-size: 13px; font-weight: 400; color: var(--ink);
+  font-size: 13.5px; font-weight: 400; color: var(--ink);
   cursor: pointer; border: none; background: none;
   text-align: left; line-height: 1.45;
   transition: background 0.25s, color 0.25s;
 }
 .nav-btn:hover { background: rgba(181,136,106,0.1); color: var(--accent); }
 .nav-btn.on { background: rgba(181,136,106,0.13); color: var(--accent); font-weight: 500; }
-.nav-num { font-family: var(--serif); font-style: italic; font-size: 11px; color: var(--muted); flex-shrink: 0; }
+.nav-num { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--muted); flex-shrink: 0; }
 .nav-btn.on .nav-num { color: var(--accent); }
+
+.sb-divider { height: 1px; background: var(--border); margin: 16px 0; }
 
 .sb-footer {
   margin-top: auto; padding-top: 20px;
   border-top: 1px solid var(--border);
-  font-size: 11px; color: var(--muted); line-height: 2;
+  font-size: 12px; color: var(--muted); line-height: 2.1;
 }
 kbd {
   display: inline-block;
@@ -123,9 +124,9 @@ kbd {
 .slide.on { opacity: 1; transform: translateY(0); pointer-events: auto; }
 .slide.out { opacity: 0; transform: translateY(-14px); }
 
-/* ── Typography — bumped up ── */
+/* ── Typography ── */
 .s-meta {
-  font-size: 11px; font-weight: 500; letter-spacing: 0.17em;
+  font-size: 12px; font-weight: 500; letter-spacing: 0.17em;
   text-transform: uppercase; color: var(--muted); margin-bottom: 22px; flex-shrink: 0;
 }
 .s-meta b { color: var(--accent); font-weight: 500; }
@@ -161,69 +162,72 @@ h2.sec {
 
 .stripe { width: 44px; height: 2px; background: var(--accent); border-radius: 2px; margin-bottom: 28px; flex-shrink: 0; }
 
-/* Pull quote */
 .pq { border-left: 2px solid var(--accent); padding: 16px 24px; margin: 24px 0; max-width: 640px; flex-shrink: 0; }
 .pq p { font-family: var(--serif); font-size: 23px; font-weight: 300; font-style: italic; line-height: 1.5; }
-.pq cite { display: block; margin-top: 10px; font-size: 11px; font-weight: 500; letter-spacing: 0.1em; color: var(--muted); font-style: normal; }
+.pq cite { display: block; margin-top: 10px; font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: var(--muted); font-style: normal; }
 
-/* Cards */
 .cards { display: grid; gap: 14px; flex-shrink: 0; }
 .c3 { grid-template-columns: repeat(3, 1fr); max-width: 860px; }
 .c2 { grid-template-columns: repeat(2, 1fr); max-width: 720px; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: 11px; padding: 24px 24px 20px; backdrop-filter: blur(8px); }
 .card-n { font-family: var(--serif); font-size: 13px; font-style: italic; color: var(--accent); margin-bottom: 8px; display: block; }
 .card-t { font-family: var(--serif); font-size: 21px; font-weight: 400; line-height: 1.2; margin-bottom: 8px; }
-.card-b { font-size: 14px; line-height: 1.65; color: var(--muted); font-weight: 300; }
+.card-b { font-size: 15px; line-height: 1.65; color: var(--muted); font-weight: 300; }
 
-/* Context grid */
 .ctx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; max-width: 700px; margin-top: 22px; flex-shrink: 0; }
 .ctx-item { display: flex; align-items: flex-start; gap: 12px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 9px; backdrop-filter: blur(6px); }
 .ctx-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); flex-shrink: 0; margin-top: 6px; }
-.ctx-item span { font-size: 15px; line-height: 1.5; font-weight: 300; }
+.ctx-item span { font-size: 16px; line-height: 1.5; font-weight: 300; }
 
-/* Tension */
 .tension { display: grid; grid-template-columns: 1fr 48px 1fr; align-items: stretch; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 24px; max-width: 820px; backdrop-filter: blur(8px); flex-shrink: 0; }
-.t-side { padding: 28px 28px; }
-.t-label { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 14px; }
+.t-side { padding: 28px; }
+.t-label { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); font-weight: 500; margin-bottom: 14px; }
 .t-side ul { list-style: none; font-size: 16px; line-height: 2.1; font-weight: 300; }
 .t-side ul li::before { content: '—'; margin-right: 9px; color: var(--accent); font-size: 11px; }
 .t-div { display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-size: 20px; color: var(--muted); border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
 
-/* Concept trio */
 .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 13px; overflow: hidden; margin-top: 24px; max-width: 820px; flex-shrink: 0; }
 .trio-item { background: var(--surface); padding: 26px 22px; backdrop-filter: blur(8px); }
 .trio-icon { font-family: var(--serif); font-size: 32px; font-style: italic; color: var(--accent); line-height: 1; margin-bottom: 12px; display: block; }
-.trio-name { font-family: var(--serif); font-size: 20px; font-weight: 400; margin-bottom: 8px; }
-.trio-desc { font-size: 13.5px; line-height: 1.65; color: var(--muted); font-weight: 300; }
+.trio-name { font-family: var(--serif); font-size: 21px; font-weight: 400; margin-bottom: 8px; }
+.trio-desc { font-size: 14px; line-height: 1.65; color: var(--muted); font-weight: 300; }
 .trio-q { margin-top: 10px; font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--accent2); }
 
-/* Contribution */
 .contrib-list { max-width: 680px; margin-top: 20px; flex-shrink: 0; }
 .contrib-item { display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px solid var(--border); align-items: flex-start; }
 .contrib-item:last-child { border-bottom: none; }
-.contrib-arrow { font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--accent); flex-shrink: 0; padding-top: 1px; }
-.contrib-text { font-size: 15px; line-height: 1.7; font-weight: 300; }
+.contrib-arrow { font-family: var(--serif); font-style: italic; font-size: 15px; color: var(--accent); flex-shrink: 0; padding-top: 1px; }
+.contrib-text { font-size: 16px; line-height: 1.7; font-weight: 300; }
 .contrib-text strong { font-weight: 500; }
 
-/* Closing */
 .close-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; max-width: 840px; flex-shrink: 0; }
 .close-item { padding: 22px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: 11px; backdrop-filter: blur(6px); }
-.close-t { font-family: var(--serif); font-size: 16px; font-weight: 400; margin-bottom: 7px; }
-.close-b { font-size: 13.5px; line-height: 1.6; color: var(--muted); font-weight: 300; }
+.close-t { font-family: var(--serif); font-size: 17px; font-weight: 400; margin-bottom: 7px; }
+.close-b { font-size: 14px; line-height: 1.6; color: var(--muted); font-weight: 300; }
 
 /* Title slide */
 #slide-0 { justify-content: flex-end; padding-bottom: 80px; }
 .badge { display: inline-flex; align-items: center; gap: 9px; background: rgba(181,136,106,0.1); border: 1px solid rgba(181,136,106,0.22); border-radius: 100px; padding: 7px 16px; margin-bottom: 40px; flex-shrink: 0; width: fit-content; }
 .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); }
-.badge-text { font-size: 12px; font-weight: 500; letter-spacing: 0.1em; color: var(--accent); }
+.badge-text { font-size: 13px; font-weight: 500; letter-spacing: 0.1em; color: var(--accent); }
 
-/* ── Controls bar ── */
+/* ── Q&A slide ── */
+.qa-list { max-width: 780px; margin-top: 8px; flex-shrink: 0; }
+.qa-item { margin-bottom: 28px; padding-bottom: 28px; border-bottom: 1px solid var(--border); }
+.qa-item:last-child { border-bottom: none; margin-bottom: 0; }
+.qa-q {
+  font-family: var(--serif); font-size: 20px; font-weight: 400;
+  font-style: italic; color: var(--accent); margin-bottom: 10px; line-height: 1.35;
+}
+.qa-a { font-size: 15px; line-height: 1.75; font-weight: 300; color: var(--ink); }
+
+/* ── Controls ── */
 #nav-ctrl {
   position: absolute; bottom: 28px; right: 36px;
   display: flex; align-items: center; gap: 8px; z-index: 50;
 }
 .ctrl-btn {
-  width: 40px; height: 40px; border-radius: 50%;
+  width: 42px; height: 42px; border-radius: 50%;
   background: rgba(245,242,238,0.85); border: 1px solid var(--border);
   cursor: pointer; display: flex; align-items: center; justify-content: center;
   font-size: 16px; color: var(--ink); backdrop-filter: blur(10px);
@@ -231,22 +235,15 @@ h2.sec {
 }
 .ctrl-btn:hover { background: white; transform: scale(1.08); }
 .ctrl-btn:disabled { opacity: 0.28; cursor: default; transform: none; }
-#counter { font-family: var(--serif); font-style: italic; font-size: 12px; color: var(--muted); min-width: 36px; text-align: center; }
+#counter { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--muted); min-width: 36px; text-align: center; }
 
-/* ── Timer ── */
 #timer-display {
-  font-family: var(--serif); font-style: italic;
-  font-size: 13px; color: var(--muted);
-  min-width: 48px; text-align: center;
-  cursor: pointer; user-select: none;
-  transition: color 0.2s;
+  font-family: var(--serif); font-style: italic; font-size: 14px; color: var(--muted);
+  min-width: 48px; text-align: center; cursor: pointer; user-select: none; transition: color 0.2s;
 }
 #timer-display:hover { color: var(--accent); }
 #timer-display.running { color: var(--accent); }
 #timer-display.warning { color: #c0624a; }
-
-/* ── Fullscreen btn ── */
-#btn-fs { font-size: 14px; }
 
 /* ── Dots ── */
 #dots {
@@ -256,48 +253,25 @@ h2.sec {
 .dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(26,24,20,0.2); cursor: pointer; transition: background 0.3s, transform 0.3s; }
 .dot.on { background: var(--accent); transform: scale(1.5); }
 
-/* ── Speaker notes panel ── */
+/* ── Speaker notes ── */
 #notes-panel {
   position: absolute; inset: 0;
-  background: rgba(26,24,20,0.93);
+  background: rgba(26,24,20,0.94);
   backdrop-filter: blur(12px);
   z-index: 200;
-  display: none;
-  flex-direction: column;
+  display: none; flex-direction: column;
   padding: 48px 64px;
   overflow-y: auto;
 }
 #notes-panel.open { display: flex; }
-.notes-header {
-  display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 32px;
-}
-.notes-title {
-  font-size: 10px; font-weight: 500; letter-spacing: 0.2em;
-  text-transform: uppercase; color: rgba(255,255,255,0.35);
-}
-.notes-slide-label {
-  font-family: var(--serif); font-style: italic;
-  font-size: 14px; color: rgba(255,255,255,0.4);
-}
-.notes-close {
-  background: none; border: 1px solid rgba(255,255,255,0.15);
-  border-radius: 6px; color: rgba(255,255,255,0.5);
-  cursor: pointer; font-size: 12px; padding: 6px 14px;
-  transition: all 0.2s; font-family: var(--sans);
-}
+.notes-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 32px; }
+.notes-title { font-size: 11px; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.3); margin-bottom: 4px; }
+.notes-slide-label { font-family: var(--serif); font-style: italic; font-size: 15px; color: rgba(255,255,255,0.4); }
+.notes-close { background: none; border: 1px solid rgba(255,255,255,0.15); border-radius: 6px; color: rgba(255,255,255,0.5); cursor: pointer; font-size: 12px; padding: 7px 16px; transition: all 0.2s; font-family: var(--sans); }
 .notes-close:hover { background: rgba(255,255,255,0.08); color: white; }
-.notes-content {
-  font-family: var(--serif); font-size: 22px; font-weight: 300;
-  line-height: 1.7; color: rgba(255,255,255,0.88);
-  max-width: 780px;
-}
-.notes-content p + p { margin-top: 20px; }
-.notes-hint {
-  margin-top: auto; padding-top: 32px;
-  font-size: 11px; color: rgba(255,255,255,0.2);
-  letter-spacing: 0.1em;
-}
+.notes-content { font-family: var(--serif); font-size: 23px; font-weight: 300; line-height: 1.75; color: rgba(255,255,255,0.88); max-width: 800px; }
+.notes-content p + p { margin-top: 22px; }
+.notes-hint { margin-top: auto; padding-top: 32px; font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 0.1em; }
 
 /* ── Responsive ── */
 @media (max-width: 860px) {
@@ -333,11 +307,16 @@ h2.sec {
       <button class="nav-btn" data-slide="6"><span class="nav-num">6.</span>Contribution to WG4</button>
       <button class="nav-btn" data-slide="7"><span class="nav-num">7.</span>Closing</button>
     </div>
+    <div class="sb-divider"></div>
+    <div class="sb-section">
+      <div class="sb-section-title">Discussion</div>
+      <button class="nav-btn" data-slide="8"><span class="nav-num">Q.</span>Q&amp;A</button>
+    </div>
     <div class="sb-footer">
       <kbd>←</kbd> <kbd>→</kbd> navigate<br>
       <kbd>N</kbd> speaker notes<br>
       <kbd>F</kbd> fullscreen<br>
-      <kbd>T</kbd> timer<br>
+      <kbd>T</kbd> timer · dbl-click reset<br>
       <kbd>Esc</kbd> home / close
     </div>
   </div>
@@ -519,12 +498,45 @@ h2.sec {
       <p class="body" style="margin-top:24px; color:var(--muted)">Thank you. I look forward to the discussion.</p>
     </div>
 
+    <!-- 8: Q&A -->
+    <div class="slide" id="slide-8">
+      <div class="s-meta"><b>Q&amp;A</b> — Discussion</div>
+      <h2 class="sec">Questions &amp; Responses</h2>
+      <div class="stripe"></div>
+      <div class="qa-list">
+        <div class="qa-item">
+          <div class="qa-q">What has been your experience so far working with this framework? What has changed during the process?</div>
+          <div class="qa-a">My approach has been to see what emerges rather than starting with a fixed framework. The work has been in a constant state of reflection and reanalysis. Only recently have I been able to identify the boundary concepts I presented — they were not predefined, they appeared gradually as patterns across the different labs. The Professional Doctorate program is also very collaborative, with artists and researchers working on similar trajectories in different universities of applied sciences in the Netherlands. The key thing emerging now is that the framework is starting to become more transferable across contexts.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">How would this AT-LAB methodology look in practice? What kinds of activities take place inside one of these labs?</div>
+          <div class="qa-a">I usually try to design an artistic or creative activity that allows participants to interact with the system in an open way. For example, I sometimes use card-based exercises inspired by Brian Eno's Oblique Strategies — cards that introduce unexpected prompts or constraints. In prompting workshops, participants are not only asked to write prompts for AI systems but also to rethink the prompts themselves. A card might suggest thinking upside down, thinking through water, or imagining the opposite of what seems obvious. The goal is to create an imaginative environment that helps participants engage with AI systems even if they initially feel unsure where to begin.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Participatory practices can sometimes be politically instrumentalized. How do you see AI interacting with those dynamics?</div>
+          <div class="qa-a">In some ways AI certainly amplifies existing issues. Many of the questions we are facing are not entirely new. However, artistic interventions can sometimes open new perspectives. In the rural health project, designers noticed that people would use wearable devices for a week and then stop — the project stalled. When we created immersive environments that translated sensor data into light and sound, participants began to interact differently, discussing the technologies more openly and feeling more ownership over the data. In that sense the artistic environment helped people reclaim a sense of agency in relation to the technology.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Could you describe a concrete example of how participatory AI tools were used in a civic project?</div>
+          <div class="qa-a">One example comes from a placemaking project in Reggio Emilia, Italy, working with a startup from Poland. The city wanted to collect ideas from residents about public spaces — normally through surveys, which many people don't respond to. Instead we designed an interactive walk through the city. Participants used an app to generate speculative images of what those spaces could become, received prompt cards with unexpected perspectives, could see what others had created, modify ideas, vote for ones they liked, and leave comments. The result was a more collective and creative process where participants could build on each other's ideas.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Could you talk more about the immersive installation work — the Atmosfera project?</div>
+          <div class="qa-a">In Atmosfera I worked with a scientific tool developed by NASA called the Planetary Spectrum Generator — a system that simulates atmospheric conditions on different planets, calculating how light interacts with particles depending on viewing angle and environmental factors. Instead of presenting this as a scientific visualization, I created an immersive audiovisual installation using layered projections, fog, and sound. We used a special screen called hologauze that allows light to pass through while still reflecting part of the image. By placing fog both in front of and behind the screen, the projected light became visible in the air. The audience moved through planetary environments including Venus, Neptune, and Jupiter. At the end I introduced an AI-generated layer to remind the audience that what they experienced was always mediated through computational systems.</div>
+        </div>
+        <div class="qa-item">
+          <div class="qa-q">Are you also developing the technical systems yourself?</div>
+          <div class="qa-a">Yes. My background is in art, design, and technology. Much of my work involves creative coding and building custom systems. I am active in communities related to new media art and creative coding. Recently I have also been experimenting with collaborative coding practices that involve language models generating or assisting with code — some people refer to this informally as vibe coding.</div>
+        </div>
+      </div>
+    </div>
+
     <!-- ── Speaker notes overlay ── -->
     <div id="notes-panel">
       <div class="notes-header">
         <div>
           <div class="notes-title">Speaker Notes</div>
-          <div class="notes-slide-label" id="notes-slide-label">Slide 1 / 8</div>
+          <div class="notes-slide-label" id="notes-slide-label">Slide 1 / 9</div>
         </div>
         <button class="notes-close" onclick="closeNotes()">Close <kbd style="background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.5)">N</kbd></button>
       </div>
@@ -534,47 +546,49 @@ h2.sec {
 
     <div id="dots"></div>
     <div id="nav-ctrl">
-      <div id="timer-display" title="Click to start/stop (T)">0:00</div>
-      <span id="counter">1 / 8</span>
+      <div id="timer-display" title="Click to start/stop · double-click to reset">0:00</div>
+      <span id="counter">1 / 9</span>
       <button class="ctrl-btn" id="btn-prev">←</button>
       <button class="ctrl-btn" id="btn-next">→</button>
       <button class="ctrl-btn" id="btn-fs" title="Fullscreen (F)">⛶</button>
     </div>
 
-  </div><!-- /stage -->
-</div><!-- /app -->
+  </div>
+</div>
 
 <script>
 (function() {
-  const TOTAL = 8;
+  const TOTAL = 9;
   let cur = 0;
   let notesOpen = false;
 
-  // Speaker notes content per slide
   const NOTES = [
     // 0 — Title
-    `Good morning, thank you for the invitation.\n\nMy contribution today is titled: "Translating Situated AI Literacy: Participatory Artistic Research as a Source of Policy-Relevant Insight."\n\nWhat I want to propose is not a new policy framework, and not a new metric system. Instead, I want to argue that participatory artistic research environments can function as epistemic sites — places where we can observe how AI literacy and agency actually emerge in practice — and from which policy-relevant insights can be derived.`,
+    `Thank you very much for the invitation. My name is Agustín Martínez Caram. I am an artist and researcher, primarily working as a new media artist. I am currently following a pilot program in the Netherlands called the Professional Doctorate in Arts and Creative. It is a program specifically designed for professional artistic researchers.\n\nOne interesting aspect of this program is that the task force that designed it wanted to see artists intervening in different societal domains. The idea is that there are many complex social issues where new forms of thinking are needed, and the program explores how artists working through research can engage with those topics.\n\nIn my own practice, both as an artist and an artistic researcher, I have always been interested in how complex systems can become experiential through art. By that I mean systems that are usually abstract or technical, such as algorithmic systems or technological infrastructures. My interest is in how these can be translated into participatory or immersive experiences so that people can encounter them directly.\n\nWhat I will present today is a small framework that has emerged from this work. It is essentially my own micro local research universe where I have been exploring how insights that arise from situated artistic interventions might eventually be translated into forms that can speak to policy discussions.`,
 
     // 1 — The Problem
-    `WG4 is tasked with mapping AI-related policies in CCIs, assessing impact, drafting recommendations, and contributing to a Toolbox.\n\nAcross many national and European contexts, AI literacy is increasingly framed in terms of competencies, ethical guidelines, skills frameworks, and governance principles.\n\nHowever, these approaches often assume that literacy and agency are transferable as abstract categories. My question is: what if AI literacy does not first emerge as a competency, but as a situated condition?`,
+    `The main topic I look at in my research is AI literacy.\n\nIn many existing frameworks, AI literacy is primarily defined as a series of competencies or skills. These models focus on what people should know about AI systems or what abilities they should acquire in order to interact with them responsibly.\n\nOf course these approaches are important. However, what interests me most is whether literacy might emerge in a different way when people engage with systems through situated experiences.\n\nFor example, what happens when people encounter AI through embodied situations or immersive environments. What kinds of understanding appear when learning takes place through participation rather than through formal instruction.\n\nI feel that many traditional literacy models struggle to describe these processes. They often become very abstract and general, and sometimes they flatten the specific forms of understanding that emerge when people engage with technologies in concrete contexts.\n\nSo the question becomes whether literacy might be something that develops differently when people are placed inside experiential situations.`,
 
     // 2 — Recurring observation
-    `In my artistic research, I work across very different contexts. And across all of them, the same questions kept reappearing.\n\nNot as problems to solve — but as structural features of how people encounter AI in practice.\n\nThese three questions are not rhetorical. They mark the places where universal frameworks tend to lose traction.`,
+    `Within my doctorate I operationalize these ideas through a series of environments that I currently call AT LABs, which stands for Art and Technology Labs.\n\nAcross these labs three questions began to reappear again and again.\n\nThe first question is what does AI mean here, in the moment where the interaction is taking place.\n\nThe second question is who feels able to act with it. In other words, who experiences a sense of agency in relation to the system.\n\nThe third question concerns what carries over after the intervention has finished.\n\nOne important thing to note is that even when we are talking about the same AI system, its meaning can change depending on the context in which it is encountered. When the domain changes, the affordances of the system change as well.\n\nAgency also becomes very interesting in this context because I am particularly interested in whether people feel empowered to engage with technologies rather than simply being passive users.\n\nFinally I look at whether insights are portable. Does anything transfer from one lab to another or from one situation into everyday practice.`,
 
     // 3 — AT-LABs
-    `In my artistic research, I work with what I call AT-LABs — temporary, context-specific artistic research environments.\n\nThese include workshops in higher education, health-related field labs, civic participation formats, and immersive audiovisual installations.\n\nEach of these settings operates as a coherent local world, with its own temporalities, participants, affordances, power structures, and forms of meaning-making.\n\nPolylocality here is not a theory — it is a methodological condition. The same AI system behaves differently in different local worlds. And so does literacy.`,
+    `They are designed to respond to particular issues within different contexts. Polylocality becomes very important here because each lab takes place in a different domain.\n\nOne example comes from health related field labs. I worked with a consortium called Healthy Living as a Service that was introducing smart sensors into rural communities in the north of the Netherlands. They wanted to incorporate artistic intelligence into the project. Our idea was to see whether participants could develop literacy about the systems by interacting with the sensors through an immersive installation. We translated the sensor data into a light and sound environment. This population does not usually have much contact with technical museums or innovation centers that you might find in cities. So this kind of immersive environment created a different type of engagement.\n\nAnother example comes from higher education settings. I teach master's students in art programs and I observe how emerging artists approach AI technologies. I look at their level of literacy but also at what they actually want their literacy with AI to be.\n\nI also work in civic participation contexts, particularly in placemaking projects where AI tools are used to imagine possible futures for urban spaces.\n\nFinally these questions also appear in my own artistic practice, especially in immersive installations developed in collaboration with scientists.`,
 
     // 4 — Core tension
-    `What becomes visible across AT-LABs is a structural tension.\n\nOn one side: the universal frameworks, skills taxonomies, and evaluation grids that policy needs to function at scale.\n\nOn the other: the local, contingent, embodied forms of understanding that actually emerge in practice.\n\nPolicy often needs abstraction. Practice often resists it.\n\nThe question for WG4 becomes: how can we reference situated insights without flattening them? This tension is not a problem to solve — it is a condition to work with.`,
+    `From these experiences a tension becomes visible.\n\nOn the policy side there is often an expectation for universal frameworks or clear taxonomies that describe skills and competencies.\n\nHowever, in practice the situations we encounter are highly contingent. Understanding forms locally and depends heavily on the context in which the interaction occurs.\n\nAgency also becomes context dependent. People relate to systems differently depending on the environment.\n\nEmbodied sense making becomes central. Participants understand technologies through experience rather than only through explanation.\n\nI do not necessarily see this tension as something that needs to be solved. Instead it might be something we need to work across.\n\nThe question becomes how we can reference insights from artistic research in policy discussions without flattening the complexity that emerges from situated practices.`,
 
     // 5 — Boundary concepts
-    `Here I propose a modest contribution. Instead of new metrics, we work with boundary concepts.\n\nAcross AT-LAB iterations, three dimensions repeatedly became visible as useful lenses for comparison without standardization.\n\nConceptual clarity — can participants say what they think is happening?\nPerceived agency — do they feel able to act?\nTransferability — does something carry over beyond the moment?\n\nThese are not metrics. They are diagnostic lenses. They do not apply to every artwork automatically — they become visible especially in participatory or reflective research moments.`,
+    `From these observations I began to articulate a small set of boundary concepts that I use in my research.\n\nThe first is concept clarity. This relates to the question of what AI means in a specific context and whether participants can articulate that meaning.\n\nThe second is perceived agency. This refers to whether participants feel able to act with the system. Do they intervene, respond, or reposition themselves in relation to it during the experience.\n\nThe third concept is transferability. Here I pay attention to whether insights that appear in one context might carry into another context.\n\nThese concepts are not intended as metrics. Instead they function as diagnostic lenses that help me observe how understanding develops within these environments.`,
 
-    // 6 — Contribution to WG4
-    `I want to be clear: AT-LABs are not policy instruments. They are not prototypes for regulation. They are epistemic environments.\n\nThey reveal where trust breaks down, where agency emerges, where misunderstanding persists, where transfer succeeds.\n\nThese observations can inform WG4's deliverables — especially impact assessment discussions, referencing structures, and Toolbox components. But the environments themselves must remain locally coherent.`,
+    // 6 — Contribution
+    `My contribution to this discussion is that AT LABs should not be understood as policy instruments.\n\nInstead they function as systemic environments that reveal blind spots in how AI literacy is currently understood.\n\nThey can support policy discussions by providing grounded observations from practice based situations.\n\nRather than producing standardized frameworks, they can offer references that help policymakers understand how literacy and agency actually form in real contexts.\n\nIn this sense I think of them as a referencing layer rather than a standardizing layer.`,
 
     // 7 — Closing
-    `So what am I offering to this Working Group?\n\nNot infrastructure. Not new bureaucracy.\n\nBut a practice-based lens on how AI literacy actually forms. A way to extract policy-relevant insight from situated research. A minimal translational layer that preserves complexity.\n\nIf WG4 is to produce green papers, white papers, and a Toolbox, then grounding those documents in situated observation strengthens their legitimacy.\n\nCollective intelligence, in this context, should not mean convergence toward a single framework. It might instead mean a dynamic ecology of situated intelligences, capable of translation and mutual influence, while retaining local coherence.\n\nThank you. I look forward to discussing how this might intersect with our work on referencing, impact, and policy recommendations.`
+    `To bring everything together, I see these labs as forming a dynamic ecology of situated intelligence.\n\nThere is the intelligence of the artistic environment itself, the intelligence of the participants engaging with it, and the intelligence embedded within technological systems.\n\nThe goal is not to collapse these different forms of intelligence into a single framework but to allow them to interact and inform each other.\n\nThe labs are iterative. Each one influences the next and gradually shapes the framework.\n\nMy open question for this working group is how this approach might intersect with the work being developed here.\n\nThis is my first time attending in person. Previously I only joined the webinars and online meetings. I am very happy to be here and I look forward to the discussion.\n\nThank you very much.`,
+
+    // 8 — Q&A
+    `Questions and responses from the discussion following the presentation.\n\nTopics covered: the emergent nature of the framework, how AT-LAB activities work in practice (Oblique Strategies-inspired card exercises, prompting workshops), the political dimensions of participatory AI, the Reggio Emilia placemaking project, the Atmosfera immersive installation (NASA Planetary Spectrum Generator, hologauze screens, fog projection), and the role of creative coding and language models in the technical development of the work.`
   ];
 
   const slides  = Array.from({length: TOTAL}, (_, i) => document.getElementById('slide-' + i));
@@ -584,11 +598,10 @@ h2.sec {
   const btnPrev = document.getElementById('btn-prev');
   const btnNext = document.getElementById('btn-next');
   const btnFs   = document.getElementById('btn-fs');
-  const notesPanel = document.getElementById('notes-panel');
+  const notesPanel   = document.getElementById('notes-panel');
   const notesContent = document.getElementById('notes-content');
-  const notesLabel = document.getElementById('notes-slide-label');
+  const notesLabel   = document.getElementById('notes-slide-label');
 
-  // Build dots
   for (let i = 0; i < TOTAL; i++) {
     const d = document.createElement('div');
     d.className = 'dot' + (i === 0 ? ' on' : '');
@@ -618,26 +631,13 @@ h2.sec {
 
   function updateNotes() {
     notesLabel.textContent = 'Slide ' + (cur + 1) + ' / ' + TOTAL;
-    notesContent.innerHTML = NOTES[cur]
-      .split('\n\n')
-      .map(p => '<p>' + p + '</p>')
-      .join('');
+    notesContent.innerHTML = NOTES[cur].split('\n\n').map(p => '<p>' + p + '</p>').join('');
   }
 
-  function openNotes() {
-    notesOpen = true;
-    updateNotes();
-    notesPanel.classList.add('open');
-  }
-
-  function closeNotes() {
-    notesOpen = false;
-    notesPanel.classList.remove('open');
-  }
-
+  function openNotes()  { notesOpen = true;  updateNotes(); notesPanel.classList.add('open'); }
+  function closeNotes() { notesOpen = false; notesPanel.classList.remove('open'); }
   window.closeNotes = closeNotes;
 
-  // Fullscreen
   function toggleFullscreen() {
     if (!document.fullscreenElement) {
       document.documentElement.requestFullscreen().catch(() => {});
@@ -647,47 +647,31 @@ h2.sec {
       btnFs.textContent = '⛶';
     }
   }
-  document.addEventListener('fullscreenchange', () => {
-    if (!document.fullscreenElement) btnFs.textContent = '⛶';
-  });
+  document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement) btnFs.textContent = '⛶'; });
 
-  // Timer
   const timerEl = document.getElementById('timer-display');
-  let timerSecs = 0;
-  let timerRunning = false;
-  let timerInterval = null;
-  const WARN_SECS = 13 * 60; // warn at 13 min for 15 min talk
-
-  function formatTime(s) {
-    return Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
-  }
+  let timerSecs = 0, timerRunning = false, timerInterval = null;
+  function formatTime(s) { return Math.floor(s/60) + ':' + String(s%60).padStart(2,'0'); }
   function toggleTimer() {
     if (timerRunning) {
-      clearInterval(timerInterval);
-      timerRunning = false;
-      timerEl.classList.remove('running', 'warning');
+      clearInterval(timerInterval); timerRunning = false;
+      timerEl.classList.remove('running','warning');
     } else {
-      timerRunning = true;
-      timerEl.classList.add('running');
+      timerRunning = true; timerEl.classList.add('running');
       timerInterval = setInterval(() => {
         timerSecs++;
         timerEl.textContent = formatTime(timerSecs);
-        if (timerSecs >= WARN_SECS) timerEl.classList.add('warning');
+        if (timerSecs >= 13*60) timerEl.classList.add('warning');
       }, 1000);
     }
   }
   function resetTimer() {
-    clearInterval(timerInterval);
-    timerRunning = false;
-    timerSecs = 0;
-    timerEl.textContent = '0:00';
-    timerEl.classList.remove('running', 'warning');
+    clearInterval(timerInterval); timerRunning = false; timerSecs = 0;
+    timerEl.textContent = '0:00'; timerEl.classList.remove('running','warning');
   }
-
   timerEl.addEventListener('click', toggleTimer);
-  timerEl.addEventListener('dblclick', (e) => { e.preventDefault(); resetTimer(); });
+  timerEl.addEventListener('dblclick', e => { e.preventDefault(); resetTimer(); });
 
-  // Event listeners
   btnPrev.addEventListener('click', () => goTo(cur - 1));
   btnNext.addEventListener('click', () => goTo(cur + 1));
   btnFs.addEventListener('click', toggleFullscreen);
@@ -701,10 +685,9 @@ h2.sec {
     if (e.key === 'n' || e.key === 'N') { notesOpen ? closeNotes() : openNotes(); }
     if (e.key === 'f' || e.key === 'F') toggleFullscreen();
     if (e.key === 't' || e.key === 'T') toggleTimer();
-    if (e.key >= '1' && e.key <= '8') goTo(parseInt(e.key) - 1);
+    if (e.key >= '1' && e.key <= '9') goTo(parseInt(e.key) - 1);
   });
 
-  // Init
   btnPrev.disabled = true;
   counter.textContent = '1 / ' + TOTAL;
 })();
